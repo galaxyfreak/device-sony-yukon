@@ -13,6 +13,7 @@
 # limitations under the License.
 
 TARGET_ARCH := arm
+TARGET_KERNEL_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_BOARD_PLATFORM := msm8226
 TARGET_CPU_ABI := armeabi-v7a
