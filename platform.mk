@@ -38,6 +38,10 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/usr/keylayout/msm8226-tapan-snd-card_Button_Jack.kl:system/usr/keylayout/msm8226-tapan-snd-card_Button_Jack.kl \
     $(SONY_ROOT)/system/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
+# Extra
+PRODUCT_COPY_FILES += \
+     $(SONY_ROOT)/system/etc/sensors_settings:system/etc/sensors_settings
+
 # Device Specific Hardware
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
