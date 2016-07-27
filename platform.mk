@@ -38,6 +38,11 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/usr/keylayout/msm8226-tapan-snd-card_Button_Jack.kl:system/usr/keylayout/msm8226-tapan-snd-card_Button_Jack.kl \
     $(SONY_ROOT)/system/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
+
+# FM
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/etc/init.qcom.fm.sh:system/etc/init.qcom.fm.sh
+
 # Extra
 PRODUCT_COPY_FILES += \
      $(SONY_ROOT)/system/etc/sensors_settings:system/etc/sensors_settings
