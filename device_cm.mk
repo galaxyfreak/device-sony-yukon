@@ -20,6 +20,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# Camera
+PRODUCT_PACKAGES += \
+    libsonycam
+
 # Bootimg tools
 PRODUCT_PACKAGES += \
     extract_elf_ramdisk
