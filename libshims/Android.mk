@@ -13,14 +13,14 @@
 # limitations under the License.
 
 LOCAL_PATH := $(call my-dir)
+
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
-    sony_camera.c
+    gui/SensorManager.cpp
 
-LOCAL_CLANG := true
-LOCAL_SHARED_LIBRARIES := libutils libgui liblog
-LOCAL_MODULE := libsonycam
+LOCAL_SHARED_LIBRARIES := libutils libgui liblog libbinder
+LOCAL_MODULE := libshim_camera
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)

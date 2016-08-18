@@ -22,7 +22,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libsonycam
+    libshim_camera
 
 # Bootimg tools
 PRODUCT_PACKAGES += \
