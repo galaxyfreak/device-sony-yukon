@@ -36,7 +36,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnGSMDevice=1
 
 PRODUCT_COPY_FILES += \
-     device/sony/yukon/rootdir/$(DEVICE_RESOLUTION).rle:root/logo.rle
+     device/sony/yukon/rootdir/logo.rle:root/logo.rle
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
