@@ -31,6 +31,12 @@ PRODUCT_PACKAGES += \
     FM2 \
     FMRecord
 
+# Telephony packages
+PRODUCT_PACKAGES += \
+    telephony-ext
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnGSMDevice=1

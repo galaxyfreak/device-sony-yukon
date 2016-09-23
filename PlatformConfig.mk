@@ -40,9 +40,18 @@ BOARD_CUSTOM_BOOTIMG_MK := device/sony/yukon/mkbootimg.mk
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 TARGET_USES_QCOM_BSP := true
-COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
+BOARD_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
 USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_EGL_CFG := device/sony/yukon/rootdir/system/lib/egl/egl.cfg
+
+
+# 4.8 Toolchain
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+
+# Camera N
+TARGET_NEEDS_TEXT_RELOCATIONS := true
+
 
 # FM
 QCOM_FM_ENABLED := true
