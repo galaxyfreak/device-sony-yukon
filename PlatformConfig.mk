@@ -79,7 +79,4 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 # NFC
 BOARD_NFC_CHIPSET := pn547
 
-# SELinux
-BOARD_SEPOLICY_DIRS += device/sony/yukon/sepolicy
-
 include device/sony/common/CommonConfig.mk
