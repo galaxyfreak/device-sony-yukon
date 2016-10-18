@@ -46,18 +46,20 @@ BOARD_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
 USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_EGL_CFG := device/sony/yukon/rootdir/system/lib/egl/egl.cfg
 
-
 # 4.8 Toolchain
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
-KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+#KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Camera N
-TARGET_NEEDS_TEXT_RELOCATIONS := true
-
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
+BOARD_GLOBAL_CFLAGS += -DTARGET_HAS_LEGACY_CAMERA_HAL1
 
 # FM
+BOARD_HAVE_QCOM_FM := true
 QCOM_FM_ENABLED := true
 AUDIO_FEATURE_ENABLED_FM := true
+TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # Wi-Fi definitions for Qualcomm solution
 BOARD_HAS_QCOM_WLAN := true

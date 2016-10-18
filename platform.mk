@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     $(SONY_ROOT)/system/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
 
-# Qualcom BT
+# Qualcomm BT
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
 
@@ -38,11 +38,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/usr/keylayout/msm8226-tapan-snd-card_Button_Jack.kl:system/usr/keylayout/msm8226-tapan-snd-card_Button_Jack.kl \
     $(SONY_ROOT)/system/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
-
-
-# FM
-PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/etc/init.qcom.fm.sh:system/etc/init.qcom.fm.sh
 
 # Extra
 PRODUCT_COPY_FILES += \
@@ -84,7 +79,13 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qualcomm.bt.hci_transport=smd
+    ro.qualcomm.bt.hci_transport=smd \
+    qcom.bluetooth.soc=smd
+
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.legacyencoder=true \
+    media.stagefright.codecremote=false
 
 # RILD
 PRODUCT_PROPERTY_OVERRIDES += \
